@@ -26,4 +26,8 @@ Ahora que sabemos que tenemos conectividad, podemos escanear los puertos que est
 
 `sudo nmap -p- -sS -sC -sV --min-rate=5000 -n -vvv -Pn 192.168.95.104 -oN allPorts`
 
-Este comando lo que hace es buscar todos los puertos abiertos (1-65535) (`-p-`, lo hace de manera sigilosa (`-sS`), busca la versión de los servicios ( `-sV`), de manera rápida(`--min-rate=5000`), desactiva la resolución DNS para evitar problemas(`-n`), utiliza triple verbose para que tengamos más detalle del escaneo (`-vvv`)y omite la detección de host(`-Pn`). Lo guarda en el fichero allPorts (`-oN allPorts`)
+Este comando lo que hace es buscar todos los puertos abiertos (1-65535) (`-p-`, lo hace de manera sigilosa (`-sS`), busca la versión de los servicios ( `-sV`), de manera rápida(`--min-rate=5000`), desactiva la resolución DNS para evitar problemas(`-n`), utiliza triple verbose para que tengamos más detalle del escaneo (`-vvv`)y omite la detección de host(`-Pn`). Lo guarda en el fichero allPorts (`-oN allPorts`).
+
+![captura-nmap](https://github.com/Alv-fh/Plex/assets/109484163/2c352940-0cee-4dd9-8c7b-0277b9a0aa3d)
+
+Como podemos ver, el puerto 21 está abierto. Es el puerto de **FTP**. Pero hay algo raro, y es que si nos fijamos, en el servicio, pone **SSH**. En este caso parece una especie de **multiplexación**. 
