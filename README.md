@@ -39,4 +39,12 @@ Como no hay ningún otro puerto abierto, me da a pensar de que utiliza **SSLH** 
 
 [SSLH](https://github.com/yrutschle/sslh)
 
+Como podemos ver dice que acepta las conexiones de puertos específicos y que las reenvia. 
+
+![captura-sslh](https://github.com/Alv-fh/Plex/assets/109484163/52af3ff2-622d-4ab8-a7cc-b23027271ee4)
+
+Entonces nosotros podemos hacer un **curl -I** para que solo nos muestre el **HEAD**, es decir la cabecera.
+
+![captura-curl_-i](https://github.com/Alv-fh/Plex/assets/109484163/c393cf9a-6372-46ca-aa32-641453f06b2c)
+
 
