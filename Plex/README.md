@@ -51,6 +51,12 @@ Vemos que utiliza Apache2 por este puerto, entonces hacemos un **curl** de tipo 
 
 ![capura-get](https://github.com/Alv-fh/Plex/assets/109484163/98abd722-e30c-44f6-8439-3be1a584ebd4)
 
+En este punto lo que se me ocurre es hacer fuzzing, para ello podemos utilizar tanto gobuster como wfuzz, en mi caso lo voy a hacer con wfuzz.
+
+
+
+
+
 
 
 
