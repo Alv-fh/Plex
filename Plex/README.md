@@ -51,9 +51,11 @@ Vemos que utiliza Apache2 por este puerto, entonces hacemos un **curl** de tipo 
 
 ![capura-get](https://github.com/Alv-fh/Plex/assets/109484163/98abd722-e30c-44f6-8439-3be1a584ebd4)
 
-En este punto lo que se me ocurre es hacer fuzzing, para ello podemos utilizar tanto gobuster como wfuzz, en mi caso lo voy a hacer con wfuzz.
+En este punto lo que se me ocurre es hacer fuzzing, para ello podemos utilizar tanto gobuster como wfuzz, en mi caso lo voy a hacer con gobuster.
 
+![captura-gobuster](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/d7f56720-658a-48e8-8679-0468391d5104)
 
+Como se puede ver, también he puesto el parámetro -x para que busque con extensiones. En esto caso ha encontrado el fichero **[robots.txt](https://es.wikipedia.org/wiki/Est%C3%A1ndar_de_exclusi%C3%B3n_de_robots)**, que es un fichero en el que aparecen los directorios desactivados
 
 
 
