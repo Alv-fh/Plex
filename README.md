@@ -30,4 +30,11 @@ Este comando lo que hace es buscar todos los puertos abiertos (1-65535) (`-p-`, 
 
 ![captura-nmap](https://github.com/Alv-fh/Plex/assets/109484163/2c352940-0cee-4dd9-8c7b-0277b9a0aa3d)
 
-Como podemos ver, el puerto 21 está abierto. Es el puerto de **FTP**. Pero hay algo raro, y es que si nos fijamos, en el servicio, pone **SSH**. En este caso parece una especie de **multiplexación**. 
+Como podemos ver, el puerto 21 está abierto. Es el puerto de **FTP**. Pero hay algo raro, y es que si nos fijamos, en el servicio, pone **SSH**. En este caso parece una especie de **multiplexación**.
+Comprobamos que efectivamente está utilizando el servicio SSH, ya que nos pide contraseña.
+
+![captura-ssh](https://github.com/Alv-fh/Plex/assets/109484163/de4cf6cb-675d-42c8-bbc8-aae1bf0394c6)
+
+Como no hay ningún otro puerto abierto, me da a pensar de que utiliza **SSLH** ya que usa distintos servicios por ese puerto.
+
+[SSLH](https://github.com/yrutschle/sslh)
