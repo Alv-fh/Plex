@@ -47,4 +47,10 @@ Entonces nosotros podemos hacer un **curl -I** para que solo nos muestre el **HE
 
 ![captura-curl_-i](https://github.com/Alv-fh/Plex/assets/109484163/c393cf9a-6372-46ca-aa32-641453f06b2c)
 
+Vemos que utiliza Apache2 por este puerto, entonces hacemos un **curl** de tipo **GET** para ver lo que responde.
+
+![capura-get](https://github.com/Alv-fh/Plex/assets/109484163/98abd722-e30c-44f6-8439-3be1a584ebd4)
+
+
+
 
