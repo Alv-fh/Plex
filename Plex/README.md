@@ -1,4 +1,4 @@
-![captura-robots](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/263356ea-97bb-4767-a662-f09b1fd76772)# Writeup
+# Writeup
 
 ## Conocer la red
 
