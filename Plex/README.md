@@ -35,7 +35,7 @@ Comprobamos que efectivamente está utilizando el servicio SSH, ya que nos pide 
 
 ![captura-ssh](https://github.com/Alv-fh/Plex/assets/109484163/de4cf6cb-675d-42c8-bbc8-aae1bf0394c6)
 
-##SSLH
+## SSLH
 
 Como no hay ningún otro puerto abierto, me da a pensar de que utiliza **SSLH** ya que usa distintos servicios por ese puerto.
 
@@ -62,6 +62,11 @@ Como se puede ver, también he puesto el parámetro -x para que busque con exten
 Entonces ahora que sabemos que hay un fichero llamado robots.txt, pues podemos enviar un curl de tipo GET para ver lo que responde.
 
 ![captura-robots](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/c79450eb-a4fc-40f4-a6c7-ed41e6537a3e)
+
+## JSON WEB TOKEN
+
+### ¿Qué es un JSON WEB TOKEN?
+Un **Json Web Token (JWT)** es un mecanismo para poder propagar de forma segura entre dos partes, la identidad de un usuario, privilegios, etc. Esto viene todo codificado en **JSON**, que se encuentran dentro del **payload (cuerpo)**
 
 Si le hacemos el mismo curl pero a la ruta que nos devuelve el curl a robots.txt, que parece un JSON Web Token.
 
