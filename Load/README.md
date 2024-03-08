@@ -73,7 +73,7 @@ Podemos subir archivos, que quiere decir eso. Que podemos subir por ejemplo una 
 
 ![captura-github](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/6ea3c705-6644-4819-8d8d-8e82273b0a0a)
 
-Ahora editamos el script, y en donde pone **CHANGE THIS** es donde tenemos que cambiar las cosas. En este caso lo que tenemos que cambiar es la **IP**, en este caso es la IP nuestra, con la que estamos atacando, y luego el puerto en el que vamos a utilizar para la reverse sell.
+Ahora editamos el script, y en donde pone **CHANGE THIS** es donde tenemos que cambiar las cosas. En este caso lo que tenemos que cambiar es la **IP**, en este caso es la IP nuestra, con la que estamos atacando, y luego el puerto en el que vamos a utilizar para la reverse shell.
 
 ![captura-reverse](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/ffd64cae-1677-4157-969c-c6e4a8398a62)
 
@@ -83,7 +83,7 @@ Antes de ejecutar la reverse shell, nos tenemos que poner en escucha por el puer
 
 ![capura-escucha](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/59ee502a-35a0-48cc-a3f1-4b56f1921ae3)
 
-Ahora tenemos que encontrar la ruta en donde se ejecuta la reverse sell. En este caso es **IP/ritedev/media/php-reverse-shell.php**.Si vemos que se queda cargando, es buena señal. Luego nos vamos al terminal y nos debe de salir algo así.
+Ahora tenemos que encontrar la ruta en donde se ejecuta la reverse shell. En este caso es **IP/ritedev/media/php-reverse-shell.php**.Si vemos que se queda cargando, es buena señal. Luego nos vamos al terminal y nos debe de salir algo así.
 
 ![captura-escucha2](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/6b84ba3d-b9fc-4383-8364-685e1512e5a5)
 
@@ -101,9 +101,31 @@ Ahora vamos a hacer la reverse sell manegable, ya que ahora mismo no podemos hac
 
 `export TERM=xterm`
 
+Y ya tenemos una shell normal y corriente. Ahora buscamos la flag.
 
+![captura-usuario](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/5a109c31-e623-41c8-bbf7-7f5efd3c7d4c)
 
+Como podemos ver, no podemos entrar a la carpeta de travis, porque no tenemos permisos, entonces tenemos que hacer escalada de privilegios.
 
+Hacemos `sudo -l` para ver los comandos que podemos ejecutar con sudo.
 
+Vemos que podemos usar **crash**
 
+Ejecutamos `sudo -u travis /usr/bin/bash/crash -h`
+
+![captura-travis](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/49ca15c4-e017-4757-a229-2ac5d6d56e71)
+
+Ponemos **!** para poder ejecutar comandos y nos ponemos una shell en bash, se nos pondrá como travis ya que ejecutamos el comando como travis.
+
+![captura-flag](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/38da74a6-11fe-4e06-a5c9-702203f80776)
+
+Ya tenemos la flag, vamos ahora a por la de root.
+
+Volvemos a hacer `sudo -l` para ver los comando que podemos usar como root.
+
+![captura-xauth](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/dd1ff2c9-b00b-4051-9157-6552d6afc5a7)
+
+Vemos que podemos usar el comando xauth.
+
+Si hacemos un `-h` vemos que este comando puede leer 
 
