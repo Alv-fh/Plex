@@ -92,12 +92,11 @@ Y funciona, ya somos root
 
 ![captura-root](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/1cf1b8bd-085a-48c6-b136-1eb43b7e5ea0)
 
+Entonces nos vamos al directorio de root.
+
+![captura-root2](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/d8b25291-a1ed-46fb-8c5e-3c3dffba0da4)
+
 ### ¿Por qué pasa esto?
 
-Nosotros hemos ejecutado la herramienta mutt con los privilegios del usuario **root**. Entonces nosotros si ponemos `!` en el editor de texto.
-
-
-
-
-
+Nosotros hemos ejecutado la herramienta mutt con los privilegios del usuario **root**. Entonces nosotros si ponemos `!` en el editor de texto podemos escribir comandos del sistema. Por lo tanto si ejecutamos `/usr/bin/bash`, estamos ejecutando una shell de **Bash** como **root**, de manera temporal ya que hemos ejecutado el comando mutt como root.
 
