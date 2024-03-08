@@ -1,4 +1,4 @@
-# Writeup
+![captura-robots](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/263356ea-97bb-4767-a662-f09b1fd76772)# Writeup
 
 ## Conocer la red
 
@@ -35,6 +35,8 @@ Comprobamos que efectivamente está utilizando el servicio SSH, ya que nos pide 
 
 ![captura-ssh](https://github.com/Alv-fh/Plex/assets/109484163/de4cf6cb-675d-42c8-bbc8-aae1bf0394c6)
 
+##SSLH
+
 Como no hay ningún otro puerto abierto, me da a pensar de que utiliza **SSLH** ya que usa distintos servicios por ese puerto.
 
 [SSLH](https://github.com/yrutschle/sslh)
@@ -57,6 +59,13 @@ En este punto lo que se me ocurre es hacer fuzzing, para ello podemos utilizar t
 
 Como se puede ver, también he puesto el parámetro -x para que busque con extensiones. En esto caso ha encontrado el fichero **[robots.txt](https://es.wikipedia.org/wiki/Est%C3%A1ndar_de_exclusi%C3%B3n_de_robots)**.
 
+Entonces ahora que sabemos que hay un fichero llamado robots.txt, pues podemos enviar un curl de tipo GET para ver lo que responde.
+
+![captura-robots](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/c79450eb-a4fc-40f4-a6c7-ed41e6537a3e)
+
+Si le hacemos el mismo curl pero a la ruta que nos devuelve el curl a robots.txt, que parece un JSON Web Token.
+
+![captura-token](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/1c253ff6-92de-4af9-9c4b-bb311413c85d)
 
 
 
