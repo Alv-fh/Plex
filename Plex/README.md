@@ -84,7 +84,7 @@ Vemos que puede ejecutar **mutt** que es un cliente de correo electrónico, por 
 
 ![captura-mutt](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/562f9544-5cb6-4c97-a650-3fbfe13c60ff)
 
-Se nos va a abrir como una especie de editor de texto, por tanto vamos a probar a poner **!** para poder ejecutar comandos ya que en otros editores de texto se hace así. Escribimos **/usr/bin/bash**
+Se nos va a abrir como una especie de editor de texto, por tanto vamos a probar a poner **!** para poder ejecutar comandos ya que en otros editores de texto se hace así. Escribimos `/usr/bin/bash`
 
 ![captura-mutt](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/92369ffa-9848-4786-86ca-09f1b3931f56)
 
@@ -92,7 +92,11 @@ Y funciona, ya somos root
 
 ![captura-root](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/1cf1b8bd-085a-48c6-b136-1eb43b7e5ea0)
 
-###¿Por que pasa esto?###
+### ¿Por qué pasa esto?
+
+Nosotros hemos ejecutado la herramienta mutt con los privilegios del usuario **root**. Entonces nosotros si ponemos `!` en el editor de texto.
+
+
 
 
 
