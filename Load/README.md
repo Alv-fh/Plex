@@ -20,5 +20,16 @@ Podemos ver que el **ttl** es **64** por lo tanto se trata de una máquina Linux
 
 ## Escaneo de puertos
 
-Ahora que sabemos que tenemos conectividad, podemos escanear los puertos que estan abiertos para poder hacer la intrusión. Utilizamos la herramienta nmap
+Ahora que sabemos que tenemos conectividad, podemos escanear los puertos que estan abiertos para poder hacer la intrusión. Utilizamos la herramienta nmap.
 
+`sudo nmap -p- -sS -sC -sV --min-rate=5000 -n -vvv -Pn 192.168.95.101 -oN allPorts`
+
+Este comando lo que hace es buscar todos los puertos abiertos (1-65535) (`-p-`, lo hace de manera sigilosa (`-sS`), busca la versión de los servicios ( `-sV`), de manera rápida(`--min-rate=5000`), desactiva la resolución DNS para evitar problemas(`-n`), utiliza triple verbose para que tengamos más detalle del escaneo (`-vvv`)y omite la detección de host(`-Pn`). Lo guarda en el fichero allPorts (`-oN allPorts`).
+
+![captura-nmap](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/60784049-41c4-4519-b4d1-4a692d79fb6b)
+
+Como podemos ver, están abiertos tanto el puerto **22 (SSH)** como el puerto **80 (HTTP)**. Por lo tanto podemos empezar a probar.
+
+También vemos que utiliza **Apache 2
+
+![captura-apache](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/abdd66c6-d05d-4439-abca-fd5b6f04debc)
