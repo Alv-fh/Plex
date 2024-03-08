@@ -37,4 +37,17 @@ También podemos ver que utiliza para el servivio **OpenSSH 9.2** para el servic
 
 Vemos que al buscar en el navegador web por la IP del atacante, nos devuelve la página por defecto de apache que viene al instalarse.
 
-En este punto lo que se me ocurre es hacer un **fuzzing**, para conocer los directorios que hay. Para ello podemos utilizar la herramienta gobuster, o wfuzz. En mi caso voy a utilizar **gobuster**
+En este punto lo que se me ocurre es hacer un **fuzzing**, para conocer los directorios que hay. Para ello podemos utilizar la herramienta gobuster, o wfuzz. En mi caso voy a utilizar **gobuster**.
+
+![captura-gobuster](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/d075a291-bc97-4429-8512-0d00a42f6904)
+
+Como podemos ver, encuentra el fichero **[robots.txt](https://es.wikipedia.org/wiki/Est%C3%A1ndar_de_exclusi%C3%B3n_de_robots)**, que ya hemos hablado en otras máquinas de él.
+
+Ahora buscamos en el navegador el fichero **robots.txt** para conocer los directorios que están denegados o rechazados.
+
+![captura-robots](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/4c281690-8f0e-478e-a0c1-94aeccad7870)
+
+
+
+
+
