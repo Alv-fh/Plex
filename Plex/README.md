@@ -67,7 +67,32 @@ Si le hacemos el mismo curl pero a la ruta que nos devuelve el curl a robots.txt
 
 ![captura-token](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/1c253ff6-92de-4af9-9c4b-bb311413c85d)
 
+Entonces podemos irnos a la página jwt, y pegamos la respuesta.
 
+![captura-jwt](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/7fe910f3-9c6e-497e-845b-ef492a7f8a7d)
+
+Ya tenemos el usuario y la password, entonces ya podemos entrar por ssh.
+
+![captura-ssh2](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/44e17583-abd6-40a2-9e8b-481814f316f2)
+
+Y ahí estaría la flag del usuario. Ahora vamos a por la de root.
+Hacemos un **sudo -l** para ver los comandos que puede ejecuar como sudo.
+
+![captura-sudol](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/f34d042c-d430-406e-b3b6-d75f89e9d98e)
+
+Vemos que puede ejecutar **mutt** que es un cliente de correo electrónico, por tanto, ejecutamos mutt con sudo, y con el usuario root.
+
+![captura-mutt](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/562f9544-5cb6-4c97-a650-3fbfe13c60ff)
+
+Se nos va a abrir como una especie de editor de texto, por tanto vamos a probar a poner **!** para poder ejecutar comandos ya que en otros editores de texto se hace así. Escribimos **/usr/bin/bash**
+
+![captura-mutt](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/92369ffa-9848-4786-86ca-09f1b3931f56)
+
+Y funciona, ya somos root
+
+![captura-root](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/1cf1b8bd-085a-48c6-b136-1eb43b7e5ea0)
+
+###¿Por que pasa esto?###
 
 
 
