@@ -30,6 +30,11 @@ Este comando lo que hace es buscar todos los puertos abiertos (1-65535) (`-p-`, 
 
 Como podemos ver, están abiertos tanto el puerto **22 (SSH)** como el puerto **80 (HTTP)**. Por lo tanto podemos empezar a probar.
 
-También vemos que utiliza **Apache 2
+También vemos que utiliza **Apache 2.4.57**
+También podemos ver que utiliza para el servivio **OpenSSH 9.2** para el servicio **SSH**.
 
 ![captura-apache](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/abdd66c6-d05d-4439-abca-fd5b6f04debc)
+
+Vemos que al buscar en el navegador web por la IP del atacante, nos devuelve la página por defecto de apache que viene al instalarse.
+
+En este punto lo que se me ocurre es hacer un **fuzzing**, para conocer los directorios que hay. Para ello podemos utilizar la herramienta gobuster, o wfuzz. En mi caso voy a utilizar **gobuster**
