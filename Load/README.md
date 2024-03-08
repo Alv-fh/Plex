@@ -88,12 +88,19 @@ Ahora tenemos que encontrar la ruta en donde se ejecuta la reverse sell. En este
 ![captura-escucha2](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/6b84ba3d-b9fc-4383-8364-685e1512e5a5)
 
 Ahora vamos a hacer la reverse sell manegable, ya que ahora mismo no podemos hacer muchas cosas con ella. Para ello ejecutamos los siguientes comandos.
+
 `script /dev/null -c bash`
+
 `CTRL + Z`
+
 `stty raw -echo; fg`
-`reset term`
+
+`reset xterm`
+
 `export SHELL=bash`
+
 `export TERM=xterm`
+
 
 
 
