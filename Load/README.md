@@ -47,6 +47,13 @@ Ahora buscamos en el navegador el fichero **robots.txt** para conocer los direct
 
 ![captura-robots](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/4c281690-8f0e-478e-a0c1-94aeccad7870)
 
+Entramos en el directorio ritedev.
+
+![captura-ritedev](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/20ab4a7e-0058-486e-bfbb-27b6cd4b5c88)
+
+Y se nos abre la esta página que a simple vista parece un estilo de tienda.
+
+En este punto lo que se me ocurre es volver a hacer un ataque de diccionario **(Fuzzing)** para ver los directorios o archivos que hay.
 
 
 
