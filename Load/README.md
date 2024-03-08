@@ -127,5 +127,30 @@ Volvemos a hacer `sudo -l` para ver los comando que podemos usar como root.
 
 Vemos que podemos usar el comando xauth.
 
-Si hacemos un `-h` vemos que este comando puede leer 
+Si hacemos un `-h` vemos que este comando puede leer comandos de un archivo.
 
+Después de probar he encontrado esto, y es que si hacemos un `sudo -u root /usr/bin/xauth source /root/.ssh/id_rsa`.
+
+![captura-id_rsa](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/21055337-5b74-4d43-a5eb-06e8d968857c)
+
+Podemos ver la id_rsa de root, por lo tanto, ya es fácil, todo lo demás, antes de nada tenemos que ponerla bien y completarla ya que sale recortada. Por tanto en la máquina local nos creamos un fichero y pegamos la id_rsa y hacemos lo siguiente:
+
+![image](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/c6477d2c-6577-499a-a915-1a830cbb608b)
+
+Ahora tenemos que completar la clave.
+
+Para ello nos lo pasamos a un fichero llamado **id_rsa** y lo dejamos de esta manera.
+
+![captura-id_rsa2](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/924a505d-e7d8-405c-9626-46842c8dfb04)
+
+Antes de probar a entrar por **SSH** tenemos que darle permisos **600**
+
+`sudo chmod 600 id_rsa`
+
+![captura-permisos](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/063a1293-3de1-444a-9866-dd622eaa616e)
+
+Ahora vamos a probar a entrar por **SSH** pero con la **id_rsa**, ya que no nos pide clave.
+
+![captura-flagroot](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/002f7739-772c-42c5-bdbf-83f6f93fd9f4)
+
+En este caso la flag estaba oculta.
