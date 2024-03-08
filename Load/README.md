@@ -55,6 +55,48 @@ Y se nos abre la esta página que a simple vista parece un estilo de tienda.
 
 En este punto lo que se me ocurre es volver a hacer un ataque de diccionario **(Fuzzing)** para ver los directorios o archivos que hay.
 
+![captura-admin](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/0fad6954-e919-49d4-98ba-dacd056d4307)
+
+Vemos que hay un admin.php. Vamos a buscar, haber que sale.
+
+![captura-admin2](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/b287d6b5-a8d4-4872-adf9-2f8182c47d0c)
+
+Se nos abre esta especie de login, vamos a probar credenciales, típicas, como **admin** **admin**
+
+![captura-admin3](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/d358cce8-2aeb-4eac-99aa-8abd354f5407)
+
+Parece que ha funcionado, ahora vamos a irnos al **Files Manager** que es el más útil creo yo, ya que vamos a ver todo lo que hay.
+
+![captura-filemanager](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/741f7794-281a-4c47-8a21-66e97c97be99)
+
+Podemos subir archivos, que quiere decir eso. Que podemos subir por ejemplo una **reverse shell** en php por ejemplo. Para ello vamos a descargarnos una herramienta de GitHub.
+
+![captura-github](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/6ea3c705-6644-4819-8d8d-8e82273b0a0a)
+
+Ahora editamos el script, y en donde pone **CHANGE THIS** es donde tenemos que cambiar las cosas. En este caso lo que tenemos que cambiar es la **IP**, en este caso es la IP nuestra, con la que estamos atacando, y luego el puerto en el que vamos a utilizar para la reverse sell.
+
+![captura-reverse](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/ffd64cae-1677-4157-969c-c6e4a8398a62)
+
+Antes de ejecutar la reverse shell, nos tenemos que poner en escucha por el puerto que hayamos especificado, en mi caso el 443.
+
+`nc -nlvp 443`
+
+![capura-escucha](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/59ee502a-35a0-48cc-a3f1-4b56f1921ae3)
+
+Ahora tenemos que encontrar la ruta en donde se ejecuta la reverse sell. En este caso es **IP/ritedev/media/php-reverse-shell.php**.Si vemos que se queda cargando, es buena señal. Luego nos vamos al terminal y nos debe de salir algo así.
+
+![captura-escucha2](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/6b84ba3d-b9fc-4383-8364-685e1512e5a5)
+
+Ahora vamos a hacer la reverse sell manegable, ya que ahora mismo no podemos hacer muchas cosas con ella. Para ello ejecutamos los siguientes comandos.
+`script /dev/null -c bash`
+`CTRL + Z`
+`stty raw -echo; fg`
+`reset term`
+`export SHELL=bash`
+`export TERM=xterm`
+
+
+
 
 
 
