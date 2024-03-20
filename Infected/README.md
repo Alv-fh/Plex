@@ -100,6 +100,10 @@ Volvemos a buscar en **[GTfobins](https://GTfobins.github.io)**.
 
 Seguimos los pasos.
 
+![captura-joe-root](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/474b1c06-6ede-4c7e-87fa-a108357f70c2)
+
+Y buscamos la flag.
+
 ![captura-flag-root](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/aa5d388d-f987-4ec5-bb2e-2face328c9bb)
 
 Encontramos las dos flag.
