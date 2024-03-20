@@ -51,6 +51,8 @@ Y encontramos la flag. Ahora vamos a por la de **root**.
 
 Busco binarios que pueda ejecutar como **SUID**.
 
+`find / -perm -4000 2>/dev/null`
+
 ![captura-env](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/080e9af5-ad05-4d96-ab13-23de3c512c6f)
 
 Encuentro uno fuera de lo normal llamado **env**.
