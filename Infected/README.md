@@ -78,6 +78,28 @@ Volvemos la reverse shell útil y cómoda.
 
 `export BASH=bash`
 
-Podemos ejecutar **service** como **laurent**. Buscamos el binario en **[GTfobins](https://GTfobins.github.io)**
+Podemos ejecutar **service** como **laurent**. Buscamos el binario en **[GTfobins](https://GTfobins.github.io)**.
 
+Y seguimos los pasos
 
+![captura-gtfobins](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/51c1c621-3cb6-45fd-8c6d-e6ee8fa30fcc)
+
+Una vez hechos los pasos, buscamos la flag.
+
+![captura-laurent](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/cd77b848-8226-42b0-9924-d48988f97391)
+
+Ahora vamos a por la de root.
+
+![captura-root](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/f93535f8-35ba-461d-9d83-32fb0da1b00d)
+
+Vemos que podemos ejecutar como root el comando **joe**.
+
+Volvemos a buscar en **[GTfobins](https://GTfobins.github.io)**.
+
+![captura-gtfobins-joe](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/908cf6cc-fea5-4be7-b072-3784300e42a7)
+
+Seguimos los pasos.
+
+![captura-flag-root](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/aa5d388d-f987-4ec5-bb2e-2face328c9bb)
+
+Encontramos las dos flag.
