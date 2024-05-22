@@ -10,7 +10,7 @@ Lo primero de todos es encontrar equipos dentro de mi red.
 
 Ahora podemos saber cuál es la máquina atacante ya que estamos en VMware y la MAC siempre empieza por **00:0c** Por lo tanto sería la **192.168.95.101**
 
-## Conectividad con la máquina atacante
+## Conectividad con la máquina objetivo
 
 Comprobamos que tenemos conectividad.
 
